@@ -51,7 +51,37 @@
   - `find(key)`: Returns an iterator to the key or `end()` if not found.
   - `at(key)`: Accesses the value by key with bounds checking.
   - `size()`: Returns the number of elements.
-  
+
+### 6. `std::priority_queue`
+- **Description**: Container adaptor that provides constant time lookup of the largest (by default) element.
+- **Functions**:
+  - `push(val)`: Adds an element to the queue.
+  - `pop()`: Removes the top (largest) element.
+  - `top()`: Returns the top element.
+  - `size()`: Returns the number of elements.
+  - `empty()`: Checks if the queue is empty.
+- **Notes**:
+  - By default, it acts as a max-heap. You can use custom comparators for min-heap.
+
+### 7. `std::stack`
+- **Description**: Container adaptor that implements a LIFO (Last In, First Out) stack.
+- **Functions**:
+  - `push(val)`: Adds an element to the top.
+  - `pop()`: Removes the top element.
+  - `top()`: Returns the top element.
+  - `size()`: Returns the number of elements.
+  - `empty()`: Checks if the stack is empty.
+
+### 8. `std::queue`
+- **Description**: Container adaptor that implements a FIFO (First In, First Out) queue.
+- **Functions**:
+  - `push(val)`: Adds an element to the back.
+  - `pop()`: Removes the front element.
+  - `front()`: Returns the front element.
+  - `back()`: Returns the last element.
+  - `size()`: Returns the number of elements.
+  - `empty()`: Checks if the queue is empty.
+
 ---
 
 ## Algorithms
@@ -87,6 +117,15 @@
   ```cpp
   auto it = std::find(arr.begin(), arr.end(), 5);
   ```
+### 5. `__builtin_popcount` (Count Number of Set Bits)
+- **Description**: Returns the number of set bits (1s) in the binary representation of an integer.
+- **Function** (GCC/Clang built-in):
+  ```cpp
+  int n = 15; // 0b1111
+  int count = __builtin_popcount(n); // count = 4
+  ```
+- **Notes**:
+  - For `long long`, use `__builtin_popcountll(n)`.
 
 ---
 
